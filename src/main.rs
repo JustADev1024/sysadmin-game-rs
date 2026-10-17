@@ -1,4 +1,4 @@
-use std::io; // Импортируем модуль ввода/вывода
+use std::io;
 
 fn main() {
     let mut input = String::new();
@@ -11,7 +11,6 @@ fn main() {
     println!("2. Go sleep.");
     println!("3. Do nothing.");
 
-    // Добавили обработку ошибки
     io::stdin().read_line(&mut input).expect("Failed to read line");
 
     match input.trim() {
@@ -24,6 +23,6 @@ fn main() {
         "3" => {
             println!("Your PC is exploded by user's messages.")
         },
-        _ => println!("I don't know this command.") // Изменил print! на println!
+        _ => println!("I don't know this command.") 
     }
 }
